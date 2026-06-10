@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuia - Enciclopédia Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-green-700 text-white p-8 shadow-lg"> 
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div>
+                <h1 class="text-4xl font-extrabold tracking-tight">🌸 Buscas e Pragas</h1>
+                <p class="text-lg opacity-90 mt-1">Sua enciclopédia digital de manejo agrícola</p>
+            </div>
+            
+            <button id="themeToggle" class="mt-4 md:mt-0 bg-green-800 hover:bg-green-600 text-white px-6 py-2 rounded-full border border-green-400 transition-all shadow-md">
+                🌙 Alternar Modo Noturno
+            </button>
+        </div>
+    </header>
+
+    <section class="container mx-auto mt-6 px-4">
+        <div class="caixa-instrucoes p-5 rounded-r-xl border-l-4 shadow-sm">
+            <h3 class="text-lg font-bold flex items-center gap-2">
+                📖 Instruções de Uso:
+            </h3>
+            <ul class="text-sm mt-2 space-y-1">
+                <li>• <strong>Busca:</strong> Digite sintomas como "mancha" ou "furo" para identificar o problema.</li>
+                <li>• <strong>Filtro:</strong> Selecione a cultura específica para carregar apenas pragas daquele plantio.</li>
+                <li>• <strong>Controle:</strong> Clique nos cards para ler as recomendações de manejo biológico.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container mx-auto my-6 p-4">
+        <div class="bg-white p-6 rounded-xl shadow-md flex flex-col md:flex-row gap-4">
+            <input type="text" id="searchInput" placeholder="Busque por sintoma ou nome (ex: mancha, lagarta)..." 
+                   class="flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none">
+            
+            <select id="filterCultura" class="p-3 border border-gray-300 rounded-lg bg-white">
+                <option value="todas">Todas as Culturas</option>
+                <option value="soja">Soja</option>
+                <option value="milho">Milho</option>
+                <option value="hortalicas">Hortaliças</option>
+            </select>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 pb-12">
+        <div id="pragasGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

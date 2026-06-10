@@ -1,0 +1,154 @@
+:root {
+    /* Tons Lilás e Roxos */
+    --primary-purple: #6c5ce7;
+    --dark-purple: #4834d4;
+    --light-purple: #a29bfe;
+    --bg-soft: #f9f8ff;
+    --text-dark: #2d3436;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--bg-soft);
+}
+
+/* Cabeçalho Lilás */
+header {
+    background: linear-gradient(135deg, var(--dark-purple) 0%, var(--primary-purple) 100%) !important;
+    border-bottom: 4px solid var(--light-purple) !important;
+}
+
+
+#themeToggle:hover {
+    background-color: var(--primary-purple);
+}
+
+/* Cards com bordas sutis em lilás */
+#pragasGrid > div {
+    border: 1px solid #efecff;
+}
+
+/* Badge de Cultura em Lilás */
+.bg-green-600 { /* Classe que usamos no JS para a etiqueta */
+    background-color: var(--primary-purple) !important;
+}
+
+/* Seção de Controle (Destaque Lilás Suave) */
+.bg-green-50 {
+    background-color: #f3f0ff !important;
+    border-left: 4px solid var(--primary-purple) !important;
+}
+
+.text-green-800, .text-green-900 {
+    color: var(--dark-purple) !important;
+}
+
+/* Ajuste no foco dos inputs */
+.container input:focus, .container select:focus {
+    border-color: var(--primary-purple) !important;
+    box-shadow: 0 0 15px rgba(108, 92, 231, 0.2) !important;
+}
+/* Aumentando o Layout Global */
+.container, .max-w-7xl {
+    max-width: 1400px !important; /* Aumenta a largura máxima de 1280px para 1400px */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Ajustando o tamanho dos cards para o novo layout */
+#pragasGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Cards um pouco maiores */
+    gap: 2rem; /* Mais espaço entre os itens */
+}
+
+/* Deixando o título "Buscas e Pragas" mais destacado */
+h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ==========================================================================
+   CÓDIGO DO MODO NOTURNO (COLE NO FINAL DO SEU STYLE.CSS)
+   ========================================================================== */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode header {
+    background: linear-gradient(135deg, #1b41c9 0%, #11afc4 100%) !important;
+    border-bottom-color: #2e819b !important;
+}
+
+/* Força os cards das pragas a ficarem escuros */
+body.dark-mode .bg-white {
+    background-color: #1e1e1e !important;
+    border-color: #333333 !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Altera a cor dos títulos no modo escuro */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #ffffff !important;
+}
+
+/* Altera a cor dos textos descritivos */
+body.dark-mode p, 
+body.dark-mode .text-gray-600, 
+body.dark-mode .text-gray-400 {
+    color: #b0b0b0 !important;
+}
+
+/* Ajusta as caixas de pesquisa e de seleção de cultura */
+body.dark-mode input, 
+body.dark-mode select {
+    background-color: #2d2d2d !important;
+    border-color: #444444 !important;
+    color: #ffffff !important;
+}
+
+/* Ajusta a caixinha verde do Manejo Biológico */
+body.dark-mode .bg-green-50 {
+    background-color: #0502a8 !important;
+    border-left-color: #348ee2 !important;
+}
+body.dark-mode .text-green-800 { color: #312ecc !important; }
+body.dark-mode .text-green-900 { color: #e0e0e0 !important; }
+
+/* ==========================================================================
+   CORES PERSONALIZADAS DO BOTÃO (DIURNO E NOTURNO)
+   ========================================================================== */
+
+/* ☀️ COR NO MODO DIURNO (Mude o #ff7675 para a cor que você quiser no modo claro) */
+#themeToggle {
+    background-color: #6306f8 !important; /* Exemplo: Um verde mais vivo */
+    border-color: #852ecc !important;
+    color: #ffffff !important;
+}
+
+/* 🌙 COR NO MODO NOTURNO (Mude para a cor que você quiser no modo escuro) */
+body.dark-mode #themeToggle {
+    background-color: #2c3e50 !important; /* Exemplo: Azul escuro/Grafite */
+    border-color: #34495e !important;
+    color: #ffffff !important;
+}
+
+/* ==========================================================================
+   PERSONALIZAÇÃO DE CORES DA CAIXINHA DE INSTRUÇÕES
+   ========================================================================== */
+
+/* ☀️ Cor no Modo Diurno (Claro) */
+.caixa-instrucoes {
+    background-color: #5d00ff !important; /* Cor do fundo (Exemplo: Azul bem clarinho) */
+    border-color: #18004f !important;     /* Cor da barrinha lateral (Exemplo: Azul vivo) */
+    color: #eadcff !important;             /* Cor do texto interno (Exemplo: Azul escuro) */
+}
+
+/* 🌙 Cor no Modo Noturno (Escuro) */
+body.dark-mode .caixa-instrucoes {
+    background-color: #1a2332 !important; /* Cor do fundo no escuro (Exemplo: Grafite azulado) */
+    border-color: #2196f3 !important;     /* Mantém a barrinha lateral visível */
+    color: #f0f4f8 !important;             /* Cor do texto no escuro (Exemplo: Branco fosco) */
+}
