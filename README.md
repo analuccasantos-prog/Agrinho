@@ -16,5 +16,3 @@ O **Buscas e Pragas** é uma plataforma digital e interativa projetada para auxi
 * CSS3 (Customizado para Modo Noturno)
 * Tailwind CSS (Estilização e Responsividade)
 * JavaScript (Manipulação dinâmica de dados e filtros)
-
-Ptojeto desenvolvido para o concurso Agrinho
